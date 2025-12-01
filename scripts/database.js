@@ -13,7 +13,7 @@ const database = {
         id: 3,
         name: "Anna Bowton",
         email: "abowton2@wisc.edu",
-        spōrt: "Golf"
+        sport: "Golf"
     }, {
         id: 4,
         name: "Hunfredo Drynan",
@@ -102,3 +102,6 @@ const database = {
         wish: "catching a foul ball at a Major League game!"
     }]
 }
+
+export const getCelebrities = () => structuredClone(database.celebrities)
+export const getChildren = () => structuredClone(database.children)
