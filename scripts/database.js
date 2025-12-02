@@ -36,7 +36,7 @@ const database = {
         sport: "Baseball"
     }, {
         id: 8,
-        mane: "Tiffanie Tubby",
+        name: "Tiffanie Tubby",
         email: "ttubby7@intel.com",
         sport: "Basketball"
     }, {
@@ -69,7 +69,7 @@ const database = {
         id: 4,
         name: "Karine McKennan",
         celebrityId: 6,
-        wissh: "watching a landing on a super difficult vault!"
+        wish: "watching a landing on a super difficult vault!"
     }, {
         id: 5,
         name: "Cissy Weavers",
