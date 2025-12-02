@@ -42,3 +42,38 @@ Before you click the "Complete Assessment" button on the Learning Platform, add 
    > The celebrity's sport is being stored in state data on the celebrity list item in the DOM. The click event function then accesses that data through the dataset property and uses it in a string literal for the alert window's string value.
 4. Can you describe, in detail, the algorithm that is in the `main` module?
    > The main module imports the Pairings, Celebrities, and Kids functions from the other modules. It then gets the container element from the DOM and assignes it to the mainContainer variable. Next it declares a string for the HTML code and invokes the three functions to create html lists inside the string. Finally the string is used to overwrite the innerHTML property of the previously found container element.
+
+## Dependency Graph
+```mermaid
+flowchart TD
+    main["main"]
+    Pairings(["Pairings"])
+    CelebrityList(["CelebrityList"])
+    Kids(["Kids"])
+    database[("database")]
+    main-->Pairings
+    main-->CelebrityList
+    main-->Kids
+    Pairings-->database
+    CelebrityList-->database
+    Kids-->database
+```
+
+## Entity Relationship Diagram
+```mermaid
+erDiagram
+    celebrity ||--o{ child : wishes
+    celebrity {
+        int id PK
+        string name
+        string email
+        string sport
+    }
+    child {
+        int id PK
+        string name
+        int celebrityId FK
+        string wish
+    }
+```
+
