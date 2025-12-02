@@ -4,9 +4,11 @@ const celebrities = getCelebrities()
 
 addEventListener("click", (clickEvent) => {
     const clickTarget = clickEvent.target
-    const starName = clickTarget.innerText
-    const starSport = clickTarget.dataset.sport
-    window.alert(`${starName} is a ${starSport} star`)
+    if (clickTarget.dataset.type === "celebrity") {
+        const starName = clickTarget.innerText
+        const starSport = clickTarget.dataset.sport
+        window.alert(`${starName} is a ${starSport} star`)
+    }
 })
 
 export const Celebrities = () => {
